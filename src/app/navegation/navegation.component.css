@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@600;700&family=Nerko+One&family=Open+Sans&family=Zen+Dots&display=swap');
+
+*{
+  font-family: 'Zen Dots', cursive;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+li{
+  display: flex;
+  float: left;
+}
+
+a {
+
+  padding: 1rem;
+  color: #f2f2f2;
+  text-decoration: none;
+
+}
+a:hover {
+  background-color: #D99F6C;
+  transition: ease-in-out 600ms;
+
+}
+
+svg{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #592202;
+  box-shadow: 0px 2px 16px 1px rgba(0,0,0,0.75);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+
+@media screen and (max-width:650) {
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    background-color: #592202;
+    box-shadow: 0px 2px 16px 1px rgba(0,0,0,0.75);
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+}

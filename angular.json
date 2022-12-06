@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "b1ed233f-2c41-4985-9604-e61d16f87f99"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dog": {
+    "dog-api": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dog",
+            "outputPath": "dist/dog-api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "dog:build:production"
+              "browserTarget": "dog-api:build:production"
             },
             "development": {
-              "browserTarget": "dog:build:development"
+              "browserTarget": "dog-api:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dog:build"
+            "browserTarget": "dog-api:build"
           }
         },
         "test": {
@@ -97,5 +104,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "dog-api"
 }
